@@ -1,9 +1,9 @@
 {
   "name": "preentrega1-catuogno",
-  "type": "module",
+  "type": "modulegit pu",
   "main": "index.js",
   "version": "1.0.0",
-  "description": "PreEntrega1+Catuogno",
+  "description": "PreEntrega1+Barilari",
   "scripts": {
     "starts": "node ./src/index.js",
     "start": "nodemon ./src/index.js",
