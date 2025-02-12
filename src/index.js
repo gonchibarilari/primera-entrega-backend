@@ -7,6 +7,8 @@ import view_router from "./routes/view_router.js";
 import usersRouter from "./routes/users_router.js";
 import cartsRouter from "./routes/carts_router.js";
 import productsRouter from "./routes/products_router.js";
+import { __dirname, uploader } from "./utils.js";  // Importamos __dirname y uploader
+
 import { Server } from "socket.io";
 
 // Creamos una instancia de express
@@ -45,7 +47,4 @@ socketServer.on("connection", socket => {
   socketServer.emit("messageLogs", messages);
  });
 
- // socket.emit("message", "Hola, soy un servidor");
- // socket.broadcast.emit("message", "Hola, soy un servidor.");
- // socketServer.emit("message", "Hola, te respondo");
 });

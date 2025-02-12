@@ -3,14 +3,14 @@ import { Router } from "express";
 import { getAllProducts, getProductById, addProduct, updateProduct, deleteProduct } from "../controllers/products_controller.js";
 
 // Ejecutamos la función Router para obtener un objeto Router.
-const router = Router();
+const productsRouter = Router();
 
 // Rutas para productos
-router.get("/", getAllProducts);
-router.get("/:pid", getProductById);
-router.post("/", addProduct);
-router.put("/:pid", updateProduct);
-router.delete("/:pid", deleteProduct);
+productsRouter.get("/", getAllProducts);
+productsRouter.get("/:pid", getProductById);
+productsRouter.post("/", addProduct);
+productsRouter.put("/:pid", updateProduct);
+productsRouter.delete("/:pid", deleteProduct);
 
 // Exportamos el router.
-export default router;
+export default productsRouter;

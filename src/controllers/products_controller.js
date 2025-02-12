@@ -33,7 +33,8 @@ export const getProductById = async (req, res) => {
 // Función para agregar un producto
 export const addProduct = async (req, res) => {
  try {
-  const { title, description, code, price, stock, category, thumbnails } = req.body;
+  const { title, description, code, price, stock, category } = req.body;
+  const thumbnails = req.file ? `/img/${req.file.filename}` : null;
 
   if (!title || !description || !code || !price || !stock || !category || !thumbnails ) {
    return res.status(400).json({ message: "Todos los campos son obligatorios, excepto thumbnails" });

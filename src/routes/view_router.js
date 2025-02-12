@@ -1,10 +1,17 @@
-import express from "express";
+import { Router } from "express";
+import products_manager from "../models/products_manager.js";
 
-const router = express.Router();
+const viewsRouter = Router();
 
 // Ruta para renderizar la vista de Handlebars en al raíz
-router.get("/", (req, res) => {
- res.render("index", { title: "REST API" });
+viewsRouter.get("/", async (req, res) => {
+ const products = await products_manager.getProducts();
+
+ res.render("home", { title: "Home", products });
 });
 
-export default router;
+viewsRouter.get("/realtimeproducts", (req, res) => {
+ res.render("realtimeproducts", { title: "Real Time Products" });
+});
+
+export default viewsRouter;

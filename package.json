@@ -1,8 +1,7 @@
 {
   "name": "preentrega1-barilari",
-  "type": "modulegit pu",
-  "main": "index.js",
   "type": "module",
+  "main": "index.js",
   "version": "1.0.0",
   "description": "PreEntrega1+Barilari",
   "scripts": {
@@ -23,5 +22,11 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "repository": {
+    "url": "https://github.com/gonchibarilari/primera-entrega-backend.git"
   }
 }
